@@ -9,20 +9,19 @@ if (!process.argv[2]) {
 
 const location = process.argv[2];
 
-geocode(location, (error, data) => {
+geocode(location, (error, { location, latitude, longitude}) => {
    
     if (error) {
         
         return console.log('error: ', error);
     }
-
-    forecast(data.latitude, data.longitude, (error, forecastData) => {
+    forecast(latitude, longitude, (error, forecastData) => {
 
         if (error) {
             return console.log('Error: ', error);
         }
         
-        console.log(data.location);
+        console.log(location);
         console.log(forecastData);
     })
 
