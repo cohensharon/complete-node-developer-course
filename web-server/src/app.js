@@ -5,9 +5,6 @@ const hbs = require('hbs');
 
 const app = express()
 
-// app.com
-// /help
-// /about
 
 //define paths for express config
 const staticPublicPath = path.join(__dirname, '../public');
@@ -48,6 +45,24 @@ app.get('/weather', (req, res) => {
     res.send({
         forecast: 'Rain',
         location: 'Palo Alto',
+    });
+});
+
+
+// 404 Pages rendering
+app.get('/help/*', (req, res) => {
+    res.render('404page', {
+        title: 'help 404',
+        message: 'Help article not found',
+        name: 'SharCo'
+    });
+})
+
+app.get('*', (req, res) => {
+    res.render('404page', {
+        title: '404 Page',
+        message: 'Page not found',
+        name: 'SharCo'
     });
 });
 
