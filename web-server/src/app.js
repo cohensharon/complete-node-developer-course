@@ -48,6 +48,12 @@ app.get('/weather', (req, res) => {
     });
 });
 
+app.get('/products', (req, res) => {
+    res.send({
+        products: []
+    })
+});
+
 
 // 404 Pages rendering
 app.get('/help/*', (req, res) => {
