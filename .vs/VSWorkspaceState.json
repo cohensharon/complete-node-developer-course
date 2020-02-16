@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\playground"
+    "\\web-server",
+    "\\web-server\\src"
   ],
-  "SelectedNode": "\\playground\\4-callbacks.js",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
